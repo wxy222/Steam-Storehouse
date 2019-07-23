@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢迎来到Steam</title>
+    <link rel="stylesheet" href="./css/steam-lunbotu.css">
+    <script src="http://pujie1213.top/jquery.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/steam-lunbotu.js"></script>
+	<script src="./js/cookie.js"></script>
+	<link rel="shortcut icon" href="./font/favicon.ico">
+</head>
+<body>
+	<!-- 页面开头 -->
+    <div class="steamtop">
+        <div class="steamtop-div">
+        	<div class="top-logo">
+            	<img src="./images/top-logo.png" alt="">
+            	<ul>
+               		<li>商店</li>
+                	<li>社区</li>
+                	<li>关于</li>
+                	<li>客服</li>
+            	</ul>
+        	</div>
+        	<div class="top-right">
+           	 	<img src="./images/安装.png" alt="">
+            	<ul>
+                	<li>登录</li>
+                	<li>|</li>
+                	<li class="lang">
+                		<span>语言</span>
+                    	<img src="./font/xiala.png" alt="">
+						<div class="language">
+							<ul>
+								<li>繁體中文（繁体中文） </li>
+								<li>日本語（日语） </li>
+								<li>한국어（韩语） </li>
+								<li>ไทย（泰语） </li>
+								<li>български（保加利亚语）</li>
+								<li>Čeština（捷克语）</li>
+								<li>Dansk（丹麦语）</li>
+								<li>Deutsch（德语）</li>
+								<li>English（英语）</li>
+								<li>Español-España（西班牙语 - 西班牙）</li>
+								<li>Español - Latinoamérica（西班牙语-拉丁美洲）</li>
+								<li>Ελληνικά（希腊语）</li>
+								<li>Français（法语）</li>
+								<li>Italiano（意大利语）</li>
+								<li>Magyar（匈牙利语）</li>
+								<li>Nederlands（荷兰语）</li>
+								<li>Norsk（挪威语）</li>
+								<li>Polski（波兰语）</li>
+								<li>Português（葡萄牙语）</li>
+								<li>Português-Brasil（葡萄牙语-巴西）</li>
+								<li>Română（罗马尼亚语）</li>
+								<li>Русский（俄语）</li>
+								<li>Suomi（芬兰语）</li>
+								<li>Svenska（瑞典语）</li>
+								<li>Türkçe（土耳其语）</li>
+								<li>Tiếng Việt（越南语）</li>
+								<li>Українська（乌克兰语）</li>
+								<li>帮助我们翻译 Steam</li>
+							</ul>
+						</div>
+                	</li>
+            	</ul>
+        	</div>
+        </div>
+    </div>
+    <!-- 主页面 -->
+    <div class="homepage">
+        <div class="homepage-div">
+        	<div class="page-left"><!--页面左侧选项-->
+            	<div class="page-img">
+               	 	<img src="./images/steamcards_promo_02.png" alt="">
+            	</div>
+				<div class="pagr-ul">
+					<ul>
+						<li class="color">礼物卡</li>
+						<li>现已在 steam 上推出</li>
+						<li class="color">推荐</li>
+						<li><span class="ul-span1"></span>由好友推荐</li>
+						<li><span class="ul-span2"></span>由鉴赏家推荐</li>
+						<li><span class="ul-span3"></span>标签</li>
+						<li class="color">探索队列</li>
+						<li><span class="ul-span4"></span>推荐</li>
+						<li><span class="ul-span5"></span>新品</li>
+						<li class="color">浏览分类</li>
+						<li><span class="ul-span6"></span>热销商品</li>
+						<li><span class="ul-span7"></span>最近更新</li>
+						<li><span class="ul-span8"></span>新品</li>
+						<li><span class="ul-span9"></span>即将推出</li>
+						<li><span class="ul-span10"></span>优惠</li>
+						<li><span class="ul-span11"></span>虚拟现实</li>
+						<li><span class="ul-span12"></span>支持 Steam 控制器</li>
+						<li class="color">按类型浏览</li>
+						<li>免费游玩</li>
+						<li>抢先体验</li>
+						<li>休闲</li>
+						<li>体育</li>
+						<li>冒险</li>
+						<li>动作</li>
+						<li>大型多人在线</li>
+						<li>模拟</li>
+						<li>独立</li>
+						<li>竞速</li>
+						<li>策略</li>
+						<li>角色扮演</li>
+						<li class="color" id="history" style="display: none">最近查看</li>
+						<li id="his"></li>
+					</ul>
+				</div>
+       	 	</div>
+		<div class="page-right"><!--页面右侧大板块-->
+			<div class="page-top">
+                <ul>
+                    <li>
+                        <span>您的商店</span>
+                        <img src="./font/xiala.png" alt="">
+                    </li>
+                    <li>
+                        <span>游戏</span>
+                        <img src="./font/xiala.png" alt="">
+                    </li>
+                    <li>
+                        <span>软件</span>
+                        <img src="./font/xiala.png" alt="">
+                    </li>
+                    <li>
+                        <span>硬件</span>
+                        <img src="./font/xiala.png" alt="">
+                    </li>
+                    <li>
+                        <span>新闻</span>
+                    </li>
+                </ul>
+                <div class="page-inp">
+                    <input type="text" placeholder="搜索商店" class="inp">
+                    <a href="">
+                        <img src="./font/xingtaiduICON_sousuo--.png" alt="">
+                    </a>
+                </div>
+            </div>
+			<p class="jingxuan">精选和推荐</p>
+            <div class="selection">
+                <div class="selec-left" id="left"><!--拉去数据库图片S-->
+					<img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+				<div class="big-img">
+					<img src="" alt="">
+				</div>
+				<!-- 渲染数据 -->
+				<div class="selec-right" id="right"></div><!--渲染添加-->
+				<div class="screenshots" style="display:none"><!--渲染模板-->
+					<p class="selec-p1"></p>
+					<div class="selec-div">
+						<div class="selec-img">
+							<img src="" alt="">
+						</div>
+						<div class="selec-img">
+							<img src="" alt="">
+						</div>
+						<div class="selec-img">
+							<img src="" alt="">
+						</div>
+						<div class="selec-img">
+							<img src="" alt="">
+						</div>
+					</div>
+					<div class="selec-p23">
+						<p class="selec-p2">现已推出</p>
+						<p class="selec-p3">热销商品</p>
+					</div>
+					<div class="selec-pr">
+						<p class="price">
+							<span class="discount">折扣</span>
+							<span class="price-sp">原价</span>
+							<span>现价</span>
+						</p>
+						<div class="price-img">
+							<img src="./font/软件1.png" alt="">
+							<img src="./font/软件2.png" alt="">
+							<img src="./font/软件3.png" alt="">
+							<img src="./font/软件4.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="back"></div>
+			</div>
+			<div class="pop"></div>
+			<div class="popup" style="display:none">
+				<div class="podiv">
+					<p class="po1">游戏名</p>
+					<p class="po2">发行于:<span></span></p>
+					<div class="poimg">
+						<img src="" alt="">
+					</div>
+					<div class="podv">
+						<p class="dvp">总体用户测评：</p>
+						<p class="pop1">
+							<span class="posp">评测</span>
+							<span>10000篇评测</span>
+						</p>
+					</div>
+					<div class="biaoqian">
+						<p>用户标签：</p>
+						<p>
+							<span>标签</span>
+							<span>标签</span>
+							<span>标签</span>
+							<span>标签</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="button">
+                <div class="btn-left">
+                    <img src="./font/zuo.png" alt="">
+                </div>
+                <div class="btn-right">
+                     <img src="./font/you.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 轮播图2 -->
+		<div class="page-right2">
+			<p class="jingxuan2">特别优惠</p>
+		    <div class="selection">
+		        <div class="selec-left" id="left">
+					<div>
+						<div class="jingxuan2-div1">
+							<img src="./images/轮播图1.jpg" >
+							<p>每周一皆有新特惠</p>
+						</div>
+						<div class="jingxuan2-div2">
+							<img src="./images/轮播2.jpg" >
+							<p>每周一皆有新特惠</p>
+						</div>
+						<div class="jingxuan2-div3">
+							<div class="jingxuan2-div3-1">
+								<img src="./images/轮播3.1.jpg" >
+								<p class="p1">
+									<span class="del1"><del>$402</del></span>
+									<span class="del2">$24</span>
+								</p>
+								<p class="p2">-30%</p>
+							</div>
+							<div class="jingxuan2-div3-2">
+								<img src="./images/轮播3.2.jpg" >
+								<p class="p1">
+									<span class="del1"><del>$402</del></span>
+									<span class="del2">$24</span>
+								</p>
+								<p class="p2">-30%</p>
+							</div>
+						</div>
+					</div>
+					<div style="display: none;">
+						<div class="jingxuan2-div4">
+							<img src="./images/轮播图4.jpg" >
+						</div>
+						<div class="jingxuan2-div5">
+							<div class="jingxuan2-div5-1">
+								<img src="./images/轮播3.1.jpg" >
+								<p class="p1">
+									<span class="del1"><del>$402</del></span>
+									<span class="del2">$24</span>
+								</p>
+								<p class="p2">-30%</p>
+							</div>
+							<div class="jingxuan2-div5-2">
+								<img src="./images/轮播3.2.jpg" >
+								<p class="p1">
+									<span class="del1"><del>$402</del></span>
+									<span class="del2">$24</span>
+								</p>
+								<p class="p2">-30%</p>
+							</div>
+						</div>
+						<div class="jingxuan2-div6">
+							<div class="jingxuan2-div5-1">
+								<img src="./images/轮播3.1.jpg" >
+								<p class="p1">
+									<span class="del1"><del>$402</del></span>
+									<span class="del2">$24</span>
+								</p>
+								<p class="p2">-30%</p>
+							</div>
+							<div class="jingxuan2-div5-2">
+								<img src="./images/轮播3.2.jpg" >
+								<p class="p1">
+									<span class="del1"><del>$402</del></span>
+									<span class="del2">$24</span>
+								</p>
+								<p class="p2">-30%</p>
+							</div>
+						</div>
+					</div>
+		        </div>
+				<div class="selec-right" style="display: none;"></div>
+				<div class="back""></div>
+			</div>
+			<div class="button2">
+		        <div class="btn-left">
+		            <img src="./font/zuo.png" alt="">
+		        </div>
+		        <div class="btn-right">
+		             <img src="./font/you.png" alt="">
+		        </div>
+		    </div>
+		</div>
+		<div class="browse-steam">
+			<p>浏览 STEAM</p>
+			<ul class="borwse-steam-div">
+				<li>新品</li>
+				<li>优惠</li>
+				<li>免费游戏</li>
+				<li>按用户标签</li>
+			</ul>
+		</div>
+		<!-- 轮播图3 -->
+		<div class="page-right3">
+			<p class="jingxuan3"><b>为您建议</b>鉴赏家</p>
+		    <div class="selection">
+		        <div class="selec-left" id="left">
+					<div class="page-right3-div1">
+						<div class="page-right3-div1-top">
+							<div class="page3-top">
+								<img src="./images/头像1.jpg">
+								<p>
+									<span>关注</span>
+									中国鉴赏家同好会，获得更多类似评测！
+									<a href="">忽略此鉴赏家</a>
+								</p>
+								<div class="page3-top-div">
+									<p class="guanzhu">关注</p>
+									<p class="guanzhup"><span>520,883</span>名关注者</p>
+								</div>
+							</div>
+						</div>
+						<div class="page-right3-div1-bottom">
+							<ul>
+								<li>
+									<img src="./images/推荐1.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		狂怒2，一款被强行引入的开放世界元素以及不尽人意的APEX引擎耽误了的高素质主视角射击游戏
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐1.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">	
+									    	“我为什么不亲自去厨房做菜而要来玩一个游戏模拟做菜呢？”“我为什么要玩一个既费时又费力但是自己只能看到却摸不着吃不到的做菜游戏呢？”“我为什么要玩一个重复性高而且我生活中根本遇不到的菜品的游戏呢？”
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐1.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	一款非常有潜力的二战题材拟真FPS游戏。游戏的地图界面堪比现实中军事地图，而无剩余子弹提示的设计、腰射无准星需要精瞄的射击方式、以及完全靠肉眼识别敌我的战斗让游戏真实度大增。同时功能不同的各种士兵也是身负不同的重任都会对战局起到至关重要的作用。各种武器装备、载具等制作的也是相当细致，对于史实的还原很是到位。整体体验不错，不过也是相当硬核。整体来说非常推荐军迷玩家尝试，对于普通玩家来说需要熟悉适应。
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐1.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	《血污》是由五十岚亲自操刀再次把玩家带回传统恶魔城的一个作品，虽然有着制作的掣肘、优化不足和一些战斗难度设计上的缺点，但是其丰富的探索元素和恶魔城特色系统大杂烩为大家再一次演示了如何做好一款日式ARPG，这是一款绝对值得一玩的游戏。同时我认为这一作更多的意义在于为下一作做好铺垫
+									    </p>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-right3-div1" style="display: none;">
+						<div class="page-right3-div1-top">
+							<div class="page3-top">
+								<img src="./images/头像2.jpg">
+								<p>
+									<span>关注</span>
+									中国鉴赏家同好会，获得更多类似评测！
+									<a href="">忽略此鉴赏家</a>
+								</p>
+								<div class="page3-top-div">
+									<p class="guanzhu">关注</p>
+									<p class="guanzhup"><span>520,883</span>名关注者</p>
+								</div>
+							</div>
+						</div>
+						<div class="page-right3-div1-bottom">
+							<ul>
+								<li>
+									<img src="./images/推荐2.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	《Tengami》是一款不错的休闲小游戏，玩家只需通过翻页与滑动等简单动作就能解开游戏中的各种谜题，发现隐藏的秘密。有趣的谜题设计，简洁的画风，不错的BGM，休闲的玩法是这款游戏给我的整体印象，虽说是休闲类游戏，但游戏人物行动确实有点拖沓，希望可以加个让人物奔跑的设计，另外游戏流程也不是很长，总之算是个小品类的作品
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐2.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">	
+									    	一款RTS/RPG类游戏，玩家可以操控虫子探索这个广大的世界，建立自己的巢穴，击败远古生物，在玩法上很有意思，总体游戏时长大概12h左右，喜欢的可以试试。
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐2.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	《Goat of Duty》是一款第一羊称射击游戏，在游戏中玩家控制羊进行对战，在战斗中获取不同的枪械以及道具来提高战斗力，规定时间内击杀更多的敌羊以取得第一名的胜利。游戏节奏十分快，一旦被击杀可以直接点击开火键复活再次加入战场，可谓一场欢乐羊乱斗，爽就完事了。不过服务器延迟有时候会突然变高，可能在对枪时只能打到敌羊的残影，希望后续能够优化服务器吧，画质建模都中规中矩，推荐给射击游戏爱好者游玩~
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐2.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	一款国产硬核编程类游戏，可以让你体验做一个程序猿是什么感觉，游戏玩法新颖，与传统游戏不太一样，游戏中玩家需要进行简单的编程，并使其完成相应的指令，从而达到通关的目的。要想快速顺利通关需要玩家有一定的思维逻辑能力，有一定计算机基础的玩家更容易上手此款游戏，对编程有兴趣的童鞋可以试试。
+									    </p>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-right3-div1" style="display: none;">
+						<div class="page-right3-div1-top">
+							<div class="page3-top">
+								<img src="./images/头像1.jpg">
+								<p>
+									<span>关注</span>
+									中国鉴赏家同好会，获得更多类似评测！
+									<a href="">忽略此鉴赏家</a>
+								</p>
+								<div class="page3-top-div">
+									<p class="guanzhu">关注</p>
+									<p class="guanzhup"><span>520,883</span>名关注者</p>
+								</div>
+							</div>
+						</div>
+						<div class="page-right3-div1-bottom">
+							<ul>
+								<li>
+									<img src="./images/推荐3.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	简约却又不简单的《桌游模拟器》。游戏包含了各式各样的桌面游戏，从最简单的跳棋、麻将到说书DND，丰富的种类让这款简单的游戏集无数玩法于一身。同时透过创意工坊制作、下载MOD，导入更多其他种类的桌游，还能将游戏的可玩性与乐趣进一步提升。只要你有几位愿意与你一起在线玩桌游的好碰友，这款游戏可以说是绝对超值的佳作。
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐3.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">	
+									    	这是一款以剧情为主要核心的像素风roguelite游戏。游戏整体风格采用了当下流行的设计元素，战斗节奏快速而爽快，多样化的武器与角色技能赋予游戏更多组合上的乐趣。而充满随机性的地牢设计也提供了足够多的挑战。同时以围绕主角一家设计的后勤基地也提供了多种养成系统，涉及了装备、道具、技能等方方面面。而除了战斗与养成外，游戏花了大量笔墨着重描写家庭成员之间的细节互动，以体现游戏“家庭”的主题。
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐3.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	民间推出的《半条命》非官方高清重制版本，在大幅提升画面表现力的同时，提升了游戏的场景环境细节，近乎完美的还原了原作的方方面面。而且提升不仅仅是视觉上的，从枪械、射击手感、剧情演出、关卡谜题，甚至是NPC对话互动都做出了一定的新意。足以让人重温当年沉迷《半条命》的时光。然而可惜的是从立项至今，许诺的Xen关卡仍然未能更新。
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐3.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	《骑马与砍杀》是一款可玩性与可塑性都很强的游戏，其游戏性无需多言。正因为如此，借鉴它的后来者们也必须站在同一高度才能获得认可与成功。可以说，相较于其他同类游戏，《虎豹骑》是气质与玩法上最为接近骑砍的作品。对历史的考究，对细节的严谨，对玩法的传承与创新都是本作值得肯定的部分。在《骑砍2》还遥遥无期的情况下，《虎豹骑》可以作为过渡期的替代品去尝试，或许你们能够从中发现不输于骑砍的乐趣。
+									    </p>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-right3-div1" style="display: none;">
+						<div class="page-right3-div1-top">
+							<div class="page3-top">
+								<img src="./images/头像2.jpg">
+								<p>
+									<span>关注</span>
+									中国鉴赏家同好会，获得更多类似评测！
+									<a href="">忽略此鉴赏家</a>
+								</p>
+								<div class="page3-top-div">
+									<p class="guanzhu">关注</p>
+									<p class="guanzhup"><span>520,883</span>名关注者</p>
+								</div>
+							</div>
+						</div>
+						<div class="page-right3-div1-bottom">
+							<ul>
+								<li>
+									<img src="./images/推荐4.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	一款匠心独具，诚意满满的作品。 在这个有些许的日本色彩的奇幻废土上，在这个隐藏了无数秘辛、充斥着血腥残酷的世界里，开启属于“你”的人生。 说他集多家之大成，也不为过！
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐4.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">	
+									    	占用内存极小的动态壁纸软件，超级简单的自制动态壁纸工具，上万个漂亮到不行的壁纸。说真的，这钱花得不亏。
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐4.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	《狂怒2》依然充满了一切让男人们肾上腺激素狂飙的元素：好莱坞爆米花式中二又热血的故事和台词，狂热的重金属BGM，血腥的视觉体验，以及爽快又富有深度的战斗系统，你就是一名雇佣兵，在一个毫无章法的废土世界里，为了赏金和其他各式各样的奖励四处奔波大开杀戒，仁慈什么不存在的，敌人对你不会心慈手软，而你对敌人则会更加的凶残。---By：篝火营地
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐4.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	《火车峡谷2》延续了前作清新靓丽的配色，建模采用了 LowPoly 的风格而非完全的写实风，让整个游戏过程就像是在搭建一座积木小镇或城市，光这个卖相就足以吸引很多人的注意。游戏中路线的规划丝毫不能马虎，要想达成高评价须充分考虑成本、位置、运行效率等因素。看着小火车精心设计的铁道上来来回回，仿佛让人回到了儿时围着商店里的电动玩具火车目不转睛的日子，简单而又美好。----By：篝火营地
+									    </p>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-right3-div1" style="display: none;">
+						<div class="page-right3-div1-top">
+							<div class="page3-top">
+								<img src="./images/头像1.jpg">
+								<p>
+									<span>关注</span>
+									中国鉴赏家同好会，获得更多类似评测！
+									<a href="">忽略此鉴赏家</a>
+								</p>
+								<div class="page3-top-div">
+									<p class="guanzhu">关注</p>
+									<p class="guanzhup"><span>520,883</span>名关注者</p>
+								</div>
+							</div>
+						</div>
+						<div class="page-right3-div1-bottom">
+							<ul>
+								<li>
+									<img src="./images/推荐1.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	无限可能性的游戏，买了它就像买了100多个游戏一样，绝不后悔
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐2.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">	
+									    	很早接触的独立游戏，可以说因为它开始对独立游戏产生兴趣，不管是解谜还是剧情都太赞了
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐3.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	十分流畅的鬼畜游戏，难度其实还好，算是难度游戏入门吧，为全收集努力吧。买来试试，挺好
+									    </p>
+									</p>
+								</li>
+								<li>
+									<img src="./images/推荐4.jpg">
+									<p>
+										<p>推荐</p>
+									    <p class="kuangnu">		
+									    	原版以撒，难度与娱乐的完美结合，比重生更好玩，先接触重生的不建议入手，操作感会不适应。
+									    </p>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+		        </div>
+				<div class="selec-right" style="display: none;"></div>
+				<div class="back" style="display: none;"></div>
+			</div>
+			<div class="button3">
+		        <div class="btn-left">
+		            <img src="./font/zuo.png" alt="">
+		        </div>
+		        <div class="btn-right">
+		             <img src="./font/you.png" alt="">
+		        </div>
+		    </div>
+		</div>
+		<!-- 轮播图4 -->
+		<div class="page-right4">
+			<p class="jingxuan4">热门 VR 游戏</p>
+		    <div class="selection">
+		        <div class="selec-left" id="left">
+					<div class="jingxuan4-div1">
+						<ul>
+							<li><img src="./images/轮播4-1.jpg" ><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-2.jpg" ><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-3.jpg" ><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-4.jpg" ><p class="vr-p">$90</p></li>
+						</ul>
+					</div>
+					<div class="jingxuan4-div2" style="display: none;">
+						<ul>
+							<li><img src="./images/轮播4-5.jpg" ><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-6.jpg" ><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-7.jpg" ><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-8.jpg" ><p class="vr-p">$90</p></li>
+						</ul>
+					</div>
+					<div class="jingxuan4-div3" style="display: none;">
+						<ul>
+							<li><img src="./images/轮播4-9.jpg"><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-10.jpg"><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-11.jpg"><p class="vr-p">$90</p></li>
+							<li><img src="./images/轮播4-12.jpg"><p class="vr-p">$90</p></li>
+						</ul>
+					</div>
+		        </div>
+				<div class="selec-right" style="display: none;"></div>
+				<div class="back" style="display: none;"></div>
+			</div>
+			<div class="button4">
+		        <div class="btn-left">
+		            <img src="./font/zuo.png" alt="">
+		        </div>
+		        <div class="btn-right">
+		             <img src="./font/you.png" alt="">
+		        </div>
+		    </div>
+		</div>
+        </div>
+	</div>
+	<!-- VR下面页面 -->
+	<div class="pagegame">
+		<div class="pagegame-div">
+			<div class="pagegame-left">
+				<ul id="pagegame_ul"></ul>
+				<!-- 克隆模板 -->
+				<li id="pagegame_ul_li" style="display: none">
+					<a href="">
+						<img src="./font/xiala.png" class="pagegame-a-img">
+						<div class="pagegame-left-div">
+							<p class="game-name1">游戏名字</p>
+							<span class="zhek">折扣</span>
+							<p class="game-span">
+								<span class="yuanj"><del>原价</del></span>
+								<span class="xianj">现价</span>
+							</p>
+							<p class="game-name2">
+								<span><img src="./font/xiala.png"></span>
+							</p>
+							<p class="game-name3">
+								
+							</p>
+						</div>
+					</a>
+				</li>
+				<div class="page10">
+					<span class="page10-span"><</span>
+					<p>
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+						<span>5</span>
+						<span>6</span>
+						<span>7</span>
+						<span>8</span>
+						<span>9</span>
+						<span>10</span>
+					</p>
+					<span class="page10-span2">></span>
+				</div>
+			</div>
+			<div class="pagegame-right">
+				
+			</div>
+		</div>
+	</div>
+	<!-- 渲染页面数据 -->
+	<script>
+		// VR下面页面jqery ajax请求
+		let pagegameul = document.getElementById("pagegame_ul");
+		let pagegameli = document.getElementById("pagegame_ul_li");
+		$.ajax({
+			url:"http://pujie1213.top:90/gamePage",
+			data:{
+				page:1
+			},
+			typr:"GET",
+			dataType:"jsonp",
+			success(data){
+				// 渲染第一页数据
+				data.forEach(function(item,index){
+					let pagegamea = $("#pagegame_ul_li").clone();
+					pagegamea.css("display","block");
+					pagegamea.find(" a > img ").attr("src",item.imgUrl[0]);
+					pagegamea.find(" a > .pagegame-left-div > .game-name1").html(item.name);
+					pagegamea.appendTo($("#pagegame_ul"));
+				});	
+			},
+		})
+		let index = 1;
+		$.ajax({
+			url:"http://pujie1213.top:90/gamePage",
+			data:{
+				page:index
+			},
+			typr:"GET",
+			dataType:"jsonp",
+			success(data){
+				let click = $(".page10>p>span");
+				index++;
+				for(let c = 0; c < click.length; c++) {
+					click[c].onclick = function () {
+						for(let a = 0; a < data.length; a++) {
+							let pagegamea = $("#pagegame_ul_li").clone();
+							pagegamea.css("display","block");
+							pagegamea.find(" a > img ").attr("src",data[a].imgUrl[0]);
+				 			pagegamea.find(" a > .pagegame-left-div > .game-name1").html(data[a].name);
+				 			pagegamea.appendTo($("#pagegame_ul"));
+				 			for(let b = 0; b < 4; b++) {
+				 				let spana = $("<span>");
+				 				spana.html(data[b].label[a]);
+				 				$(".game-name3").append(spana);
+				 			};
+						};
+					};
+				};
+			},
+		});
+	</script>
+</body>
+</html>
